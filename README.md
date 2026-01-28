@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+
+
 # Bell_state
 
 ## Features
@@ -7,7 +8,8 @@
 - **Bell States:** Prepare all four maximally entangled Bell states (Φ⁺, Φ⁻, Ψ⁺, Ψ⁻).  
 - **Visualizations:** Bloch sphere visualizations for single-qubit states.  
 - **Educational:** Step-by-step demonstrations of qubit transformation  
+<<<<<<< HEAD
+Your local changes
 =======
-# Quantum-Gate-and-Bell-State-Perparation-
-Master's coursework project on Quantum Gates and Bell State preparation using Qiskit.
->>>>>>> Initial commit
+Incoming changes from rebase
+>>>>>>> commit-hash
