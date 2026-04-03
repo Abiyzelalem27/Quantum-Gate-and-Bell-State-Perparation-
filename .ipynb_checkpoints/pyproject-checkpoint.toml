@@ -1,0 +1,31 @@
+
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bell_state"
+version = "0.1.0"
+description = "Simulation of Bell states and quantum gates"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Abiy Zelalem Tegegne" }]
+keywords = ["quantum", "bell state", "quantum computing", "qutip", "numpy"]
+
+dependencies = [
+  "numpy>=1.23",
+  "matplotlib>=3.6",
+  "scipy>=1.10",
+  "qutip>=4.7"
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "black", "flake8"]
+
+[project.urls]
+Homepage = "https://github.com/Abiyzelalem27/Quantum_Algorithms"
+
+[tool.setuptools.packages.find]
+where = ["src"] 
