@@ -7,7 +7,7 @@ from scipy import sparse
 import scipy
 import matplotlib.pyplot as plt 
 import math
-import random  
+import random   
 
 I = np.array([[1, 0],
               [0, 1]], dtype=complex)
@@ -68,7 +68,6 @@ def projectors(dim):
 def U_N_qubits(ops):
     """
     Constructs an N-qubit operator using tensor products.
-
     Parameters
     ops : single-qubit operators.
     """
@@ -125,7 +124,6 @@ def ket_minus():
 def dm(psi):
     """
     Construct a density matrix from a pure state |psi⟩.
-
     ρ = |psi⟩⟨psi|
     """
     psi = psi/np.linalg.norm(psi)
@@ -150,7 +148,7 @@ def rotation_gate(theta, n):
 
 def toffoli_gate(U):
     """
-    General 2-control, 1-target Toffoli gate (CCU).
+    General 2-control, 1-target Toffoli gate (CC_U). 
     U: 2x2 unitary matrix to apply to target qubit if both controls are |1>.
     Returns: 8x8 unitary matrix representing the 3-qubit gate.
     """
