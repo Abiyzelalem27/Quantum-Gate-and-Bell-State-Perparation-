@@ -148,4 +148,23 @@ def rotation_gate(theta, n):
     R = np.cos(theta / 2) * I - 1j * np.sin(theta / 2) * N 
     return R
 
+def toffoli_gate(U):
+    """
+    General 2-control, 1-target Toffoli gate (CCU).
+    U: 2x2 unitary matrix to apply to target qubit if both controls are |1>.
+    Returns: 8x8 unitary matrix representing the 3-qubit gate.
+    """
+    # Construct 8x8 Toffoli as sum of tensor products
+    # Cases where first or second control is 0 → do nothing
+    term0 = np.kron(P0, I)      # control1 = 0
+    term0 = np.kron(term0, I)   # tensor with control2 and target
+    term1 = np.kron(P1, P0)     # control1=1, control2=0
+    term1 = np.kron(term1, I)   # target unchanged
+    # Case where both controls = 1 → apply U to target
+    term2 = np.kron(P1, P1)
+    term2 = np.kron(term2, U)
+    # Full Toffoli matrix
+    T = term0 + term1 + term2
+    return T 
+
 
